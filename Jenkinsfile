@@ -1,6 +1,6 @@
 pipeline {
     agent any
-0
+
     environment {
         IMAGE = "udayakumar007/trend-app:latest"
     }
@@ -9,7 +9,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/udayakumar2004/devops2.git', branch: 'main'
+                git 'https://github.com/udayakumar2004/devops2.git'
             }
         }
 
