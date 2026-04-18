@@ -132,16 +132,6 @@ GitHub → Jenkins → DockerHub → Kubernetes (EKS) → LoadBalancer → Users
 
 ---
 
-## 📸 Screenshots (Include in Submission)
-
-* Jenkins pipeline success
-* Kubernetes pods running
-* Application running in browser
-* Grafana dashboard
-* DockerHub repository
-
----
-
 ## 🏁 Conclusion
 
 This project demonstrates a **complete DevOps lifecycle**, including building, deploying, automating, and monitoring an application using real-world tools and cloud infrastructure.
