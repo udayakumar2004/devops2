@@ -1,91 +1,167 @@
-DevOps Practice Project – Dist Directory
+# 🚀 TrendStore DevOps Deployment Project
 
-This repository contains the production-ready build files (dist folder) for DevOps practice and deployment exercises.
+## 📌 Project Overview
 
-It is intentionally structured to help learners focus on CI/CD pipelines, hosting, containerization, and infrastructure setup rather than application development.
+This project demonstrates a complete **end-to-end DevOps pipeline** for deploying a production-ready React-based e-commerce application (**TrendStore**) using modern cloud and DevOps tools.
 
-📁 What This Repository Contains
+It covers the full lifecycle:
 
-dist/ – Compiled and production-ready static files
+* Application deployment
+* Containerization
+* CI/CD automation
+* Kubernetes orchestration
+* Monitoring setup
+* Cloud infrastructure on AWS
 
-HTML
+---
 
-CSS
+## 🧱 Tech Stack
 
-JavaScript
+* **Frontend:** React (Vite Build)
+* **Containerization:** Docker
+* **CI/CD:** Jenkins
+* **Version Control:** GitHub
+* **Cloud:** AWS (EKS, EC2, Load Balancer)
+* **Orchestration:** Kubernetes
+* **Monitoring:** Prometheus & Grafana
+* **Tools:** kubectl, eksctl, Helm
 
-Assets (images, fonts, etc.)
+---
 
-These files are ready to deploy to:
+## 🏗️ Architecture
 
-Web servers (Nginx / Apache)
+GitHub → Jenkins → DockerHub → Kubernetes (EKS) → LoadBalancer → Users
+                          ↓
+                   Monitoring (Prometheus + Grafana)
 
-Cloud platforms (AWS S3, Azure Blob, GCP Storage)
+---
 
-Containerized environments (Docker + Nginx)
+## 📁 Project Structure
 
-Kubernetes clusters
+* `dist/` → Production build files
+* `Dockerfile` → Container configuration
+* `deployment.yaml` → Kubernetes deployment
+* `service.yaml` → Kubernetes service
+* `Jenkinsfile` → CI/CD pipeline
+* `README.md` → Documentation
 
-CI/CD pipeline demonstrations
+---
 
-🎯 Purpose of This Repository
+## 🚀 Implementation Steps
 
-This repository is designed for:
+### 1️⃣ Application Setup
 
-DevOps beginners
+* Cloned the TrendStore repository
+* Verified application using local static server
+* Confirmed build files are working
 
-CI/CD practice
+---
 
-Deployment pipeline testing
+### 2️⃣ Dockerization
 
-Docker & Kubernetes deployment exercises
+* Created Dockerfile to serve static build
+* Built Docker image
+* Tested container locally on port 3000
 
-Web server configuration practice
+---
 
-Reverse proxy and load balancer setup
+### 3️⃣ DockerHub Integration
 
-The goal is to simulate real-world deployment scenarios using already built application files.
+* Created DockerHub repository
+* Tagged and pushed Docker image
 
-❓ Why is there NO package.json?
+---
 
-You may notice that this repository does not include:
+### 4️⃣ Kubernetes Deployment (EKS)
 
-package.json
+* Created EKS cluster using eksctl
+* Deployed application using Deployment YAML
+* Exposed service using LoadBalancer
+* Accessed application via external IP
 
-node_modules
+---
 
-Source code (src/)
+### 5️⃣ Jenkins CI/CD Pipeline
 
-Build tools configuration
+* Installed Jenkins on EC2 instance
+* Configured required plugins
+* Created pipeline for:
 
-✅ Reason:
+  * Code checkout
+  * Docker build
+  * Docker push
+  * Kubernetes deployment
 
-This repository only contains the final production build output (dist), not the development source code.
+---
 
-In a typical project:
+### 6️⃣ GitHub Webhook
 
-Developers write source code.
+* Connected GitHub with Jenkins
+* Enabled automatic build trigger on every commit
 
-The project is built using tools like:
+---
 
-Node.js
+### 7️⃣ Monitoring Setup
 
-Webpack
+* Installed Metrics Server for resource tracking
+* Deployed Prometheus and Grafana using Helm
+* Accessed Grafana dashboard via LoadBalancer
+* Monitored cluster, node, and pod metrics
 
-Vite
+---
 
-React (or other frameworks)
+## 📊 Features
 
-A dist/ folder is generated.
+* Automated CI/CD pipeline
+* Containerized application deployment
+* Kubernetes orchestration on AWS
+* Public access via LoadBalancer
+* Real-time monitoring dashboards
+* Scalable and production-ready architecture
 
-Only the production build is deployed to servers.
+---
 
-This repository represents step 4 only.
+## 🧠 Challenges Faced & Solutions
 
-Since this is already the compiled output:
+* Static assets not loading → Fixed Vite build configuration
+* Docker container errors → Used lightweight static server
+* Kubernetes pods stuck → Upgraded node resources
+* IAM permission issues → Attached correct policies
+* Metrics-server errors → Fixed TLS and networking
+* Helm installation failures → Optimized resources for small instances
 
-No dependencies are required
+---
 
-No build process is required
+## 📸 Screenshots (Include in Submission)
 
-No package.json is needed
+* Jenkins pipeline success
+* Kubernetes pods running
+* Application running in browser
+* Grafana dashboard
+* DockerHub repository
+
+---
+
+## 🏁 Conclusion
+
+This project demonstrates a **complete DevOps lifecycle**, including building, deploying, automating, and monitoring an application using real-world tools and cloud infrastructure.
+
+---
+
+## 👨‍💻 Author
+
+**K.Udaya Kumar**
+
+---
+
+
+## ⭐ Summary
+
+This project showcases practical experience in:
+
+* CI/CD pipeline implementation
+* Kubernetes deployment
+* Cloud infrastructure management
+* Monitoring and observability
+
+---
